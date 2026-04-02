@@ -1,33 +1,37 @@
 #!/bin/bash
-# update-cv.sh — Update the CV on your GitHub Pages site
+# update-cv.sh — Sync CV from Overleaf (via Dropbox) and trigger a rebuild
 #
-# Usage:
-#   ./update-cv.sh /path/to/your/cv.pdf
+# Usage:  ./update-cv.sh
 #
-# Example (after downloading from Overleaf):
-#   ./update-cv.sh ~/Downloads/main.pdf
+# What it does:
+#   1. Copies the latest .tex source from your Dropbox/Overleaf sync folder
+#   2. Commits and pushes to GitHub
+#   3. GitHub Actions compiles the .tex → PDF automatically (~2 min)
+#   4. The compiled PDF goes live at pourmohammadimohammad.github.io/cv.html
 
 set -e
 
-if [ -z "$1" ]; then
-  echo "Usage: ./update-cv.sh /path/to/cv.pdf"
-  exit 1
-fi
+OVERLEAF_DIR="$HOME/Library/CloudStorage/Dropbox/Apps/Overleaf/My Academic CV"
+SITE_DIR="$(cd "$(dirname "$0")" && pwd)"
+LATEX_DIR="$SITE_DIR/assets/latex"
 
-if [ ! -f "$1" ]; then
-  echo "Error: file not found: $1"
-  exit 1
-fi
+echo "Syncing from Overleaf (Dropbox)..."
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+# Copy source files
+cp "$OVERLEAF_DIR/My_CV.tex"    "$LATEX_DIR/My_CV.tex"
+cp "$OVERLEAF_DIR/resume.cls"   "$LATEX_DIR/resume.cls"
 
-cp "$1" "$SCRIPT_DIR/assets/cv.pdf"
-echo "Copied CV to assets/cv.pdf"
+# Copy photo if it exists
+[ -f "$OVERLEAF_DIR/IMG_5434.jpg" ] && cp "$OVERLEAF_DIR/IMG_5434.jpg" "$LATEX_DIR/IMG_5434.jpg"
 
-cd "$SCRIPT_DIR"
-git add assets/cv.pdf
-git commit -m "Update CV ($(date '+%Y-%m-%d'))"
+echo "Pushing to GitHub..."
+cd "$SITE_DIR"
+git add assets/latex/
+git diff --staged --quiet && echo "No changes detected." && exit 0
+
+git commit -m "Update CV source ($(date '+%Y-%m-%d'))"
 git push
 
 echo ""
-echo "Done! Your CV is live at https://pourmohammadimohammad.github.io/cv.html"
+echo "Done! GitHub Actions will compile the PDF in ~2 minutes."
+echo "Live at: https://pourmohammadimohammad.github.io/cv.html"

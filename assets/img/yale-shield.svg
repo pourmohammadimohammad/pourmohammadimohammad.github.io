@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
+  <!-- Shield shape -->
+  <path d="M100 230 C100 230 10 180 10 100 L10 20 L190 20 L190 100 C190 180 100 230 100 230Z"
+        fill="#00356b" stroke="#c8a951" stroke-width="5"/>
+  <!-- Book cover -->
+  <rect x="62" y="70" width="76" height="90" rx="3" fill="#c8a951"/>
+  <!-- Book spine -->
+  <rect x="96" y="70" width="8" height="90" fill="#a07830"/>
+  <!-- Book pages left -->
+  <rect x="65" y="73" width="31" height="84" rx="1" fill="#f5f0e0"/>
+  <!-- Book pages right -->
+  <rect x="104" y="73" width="31" height="84" rx="1" fill="#f5f0e0"/>
+  <!-- Hebrew text (Urim v'Thummim - represented as lines) -->
+  <text x="100" y="103" text-anchor="middle" font-family="serif" font-size="8" fill="#00356b" font-weight="bold">אוּרִים</text>
+  <text x="100" y="115" text-anchor="middle" font-family="serif" font-size="8" fill="#00356b" font-weight="bold">וְתֻמִּים</text>
+  <!-- Lux et Veritas -->
+  <text x="100" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#00356b" font-style="italic" font-weight="bold">LUX ET</text>
+  <text x="100" y="152" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#00356b" font-style="italic" font-weight="bold">VERITAS</text>
+  <!-- YALE text at bottom of shield -->
+  <text x="100" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#c8a951" font-weight="bold" letter-spacing="4">YALE</text>
+</svg>

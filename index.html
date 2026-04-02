@@ -10,7 +10,10 @@
 
 <nav>
   <div class="inner">
-    <a class="brand" href="index.html">Mo Pourmohammadi</a>
+    <a class="brand" href="index.html">
+      <img src="assets/img/yale-shield.svg" class="nav-shield" alt="Yale" />
+      Mo Pourmohammadi
+    </a>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="research.html">Research</a></li>
@@ -23,10 +26,13 @@
 
 <main>
   <section class="hero">
-    <img src="assets/img/photo.jpg" alt="Mohammad Pourmohammadi" />
+    <div class="hero-photo">
+      <img src="assets/img/photo.jpg" alt="Mohammad Pourmohammadi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <div class="photo-placeholder" style="display:none">No photo yet</div>
+    </div>
     <div class="hero-text">
       <h1>Mohammad Pourmohammadi</h1>
-      <p class="title">PhD Candidate in Finance &nbsp;·&nbsp; Yale University</p>
+      <p class="subtitle">PhD Candidate in Finance &nbsp;&middot;&nbsp; Yale University</p>
 
       <p>
         My research lies at the intersection of <strong>empirical and theoretical asset
@@ -44,17 +50,35 @@
       </p>
 
       <div class="hero-links">
-        <a class="btn primary" href="cv.html">CV</a>
-        <a class="btn" href="mailto:mo.pourmohammadi@yale.edu">Email</a>
-        <a class="btn" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="btn" href="https://github.com/pourmohammadimohammad" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="cv.html">CV</a>
+        <a class="btn btn-outline" href="mailto:mo.pourmohammadi@yale.edu">Email</a>
+        <a class="btn btn-outline" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn btn-outline" href="https://github.com/pourmohammadimohammad" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </section>
+
+  <!-- Recent papers teaser -->
+  <h2 class="section-title">Recent Research</h2>
+  <ul class="paper-list">
+    <li class="paper-card">
+      <span class="paper-title">Universal Covariance Shrinkage</span>
+      <div class="paper-authors">with Bryan Kelly, Semyon Malamud, Fabio Trojani</div>
+      <span class="badge">Working Paper</span>
+    </li>
+    <li class="paper-card">
+      <span class="paper-title">Universal Portfolio Shrinkage</span>
+      <div class="paper-authors">with Antoine Didisheim, Bryan Kelly, Semyon Malamud</div>
+      <span class="badge">Working Paper</span>
+    </li>
+  </ul>
+  <p style="margin-top:1rem; font-size:0.85rem;">
+    <a href="research.html">View all papers &rarr;</a>
+  </p>
 </main>
 
 <footer>
-  &copy; 2025 Mohammad Pourmohammadi
+  &copy; 2025 Mohammad Pourmohammadi &nbsp;&middot;&nbsp; Yale School of Management
 </footer>
 
 </body>
