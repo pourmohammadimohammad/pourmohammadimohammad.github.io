@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code — Mo Pourmohammadi</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="brand" href="index.html">Mo Pourmohammadi</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="code.html" class="active">Code</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h2 class="section-title">Code</h2>
+
+  <p style="margin-bottom:1.5rem; color: var(--muted); font-family: 'Helvetica Neue', Arial, sans-serif; font-size:0.9rem;">
+    Public repositories on
+    <a href="https://github.com/pourmohammadimohammad" target="_blank" rel="noopener">GitHub</a>.
+  </p>
+
+  <!-- Repos are loaded dynamically from the GitHub API -->
+  <div class="repo-grid" id="repo-grid">
+    <p style="color:var(--muted); font-size:0.9rem;">Loading repositories&hellip;</p>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Mohammad Pourmohammadi
+</footer>
+
+<script>
+  fetch('https://api.github.com/users/pourmohammadimohammad/repos?sort=updated&per_page=10')
+    .then(r => r.json())
+    .then(repos => {
+      const grid = document.getElementById('repo-grid');
+      if (!Array.isArray(repos) || repos.length === 0) {
+        grid.innerHTML = '<p style="color:var(--muted);font-size:0.9rem;">No public repositories yet.</p>';
+        return;
+      }
+      grid.innerHTML = repos
+        .filter(r => !r.fork)
+        .map(r => `
+          <a class="repo-card" href="${r.html_url}" target="_blank" rel="noopener">
+            <h3>${r.name}</h3>
+            <p>${r.description || '&mdash;'}</p>
+          </a>`)
+        .join('');
+    })
+    .catch(() => {
+      document.getElementById('repo-grid').innerHTML =
+        '<p style="color:var(--muted);font-size:0.9rem;">Could not load repositories.</p>';
+    });
+</script>
+
+</body>
+</html>

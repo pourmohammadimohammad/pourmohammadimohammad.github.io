@@ -1,0 +1,292 @@
+/* ============================================================
+   Base & Reset
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:      #00356b;
+  --blue-light:#286dc0;
+  --gray:      #f7f7f7;
+  --border:    #e0e0e0;
+  --text:      #222;
+  --muted:     #666;
+  --max-w:     860px;
+}
+
+body {
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background: #fff;
+}
+
+a {
+  color: var(--blue-light);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+nav {
+  background: var(--blue);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+}
+
+nav .brand {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0;
+}
+
+nav ul li a {
+  color: rgba(255,255,255,0.85);
+  padding: 0 1rem;
+  line-height: 54px;
+  display: block;
+  font-size: 0.9rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ============================================================
+   Page wrapper
+   ============================================================ */
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* ============================================================
+   Home — hero section
+   ============================================================ */
+.hero {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.hero img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.hero-text h1 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: var(--blue);
+  margin-bottom: 0.2rem;
+}
+
+.hero-text .title {
+  font-size: 1rem;
+  color: var(--muted);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 1.2rem;
+}
+
+.hero-text p {
+  margin-bottom: 0.8rem;
+  font-size: 0.97rem;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1.5px solid var(--blue-light);
+  border-radius: 3px;
+  color: var(--blue-light);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  transition: background 0.15s, color 0.15s;
+}
+.btn:hover {
+  background: var(--blue-light);
+  color: #fff;
+  text-decoration: none;
+}
+.btn.primary {
+  background: var(--blue-light);
+  color: #fff;
+}
+.btn.primary:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+/* ============================================================
+   Section headings
+   ============================================================ */
+h2.section-title {
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: var(--blue);
+  border-bottom: 1.5px solid var(--border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.5rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   Paper list (Research)
+   ============================================================ */
+.paper-list {
+  list-style: none;
+}
+
+.paper-list li {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.paper-list li:last-child { border-bottom: none; }
+
+.paper-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.paper-authors {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+.paper-status {
+  display: inline-block;
+  font-size: 0.78rem;
+  background: var(--gray);
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.5rem;
+  border-radius: 2px;
+  color: var(--muted);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ============================================================
+   Teaching / generic list
+   ============================================================ */
+.entry-list {
+  list-style: none;
+}
+
+.entry-list li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.entry-list li:last-child { border-bottom: none; }
+
+.entry-title { font-size: 0.97rem; }
+.entry-sub { font-size: 0.88rem; color: var(--muted); font-family: "Helvetica Neue", Arial, sans-serif; }
+.entry-meta { font-size: 0.85rem; color: var(--muted); white-space: nowrap; font-family: "Helvetica Neue", Arial, sans-serif; }
+
+/* ============================================================
+   CV page
+   ============================================================ */
+.cv-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.cv-embed {
+  width: 100%;
+  height: 80vh;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+/* ============================================================
+   Code page
+   ============================================================ */
+.repo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.repo-card {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  transition: border-color 0.15s;
+}
+.repo-card:hover { border-color: var(--blue-light); }
+.repo-card h3 { font-size: 0.95rem; color: var(--blue-light); margin-bottom: 0.3rem; }
+.repo-card p { font-size: 0.85rem; color: var(--muted); }
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 620px) {
+  .hero { flex-direction: column; }
+  .hero img { width: 140px; height: 140px; }
+  nav .brand { display: none; }
+  .repo-grid { grid-template-columns: 1fr; }
+  .entry-list li { flex-direction: column; gap: 0.2rem; }
+}
