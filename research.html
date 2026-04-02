@@ -41,7 +41,7 @@
       font-family: 'Inter', sans-serif;
       margin-left: 0.5rem;
     }
-    .paper-links { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; }
+    .paper-links { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; align-items: center; }
     .paper-link {
       font-size: 0.75rem;
       font-weight: 500;
@@ -52,6 +52,15 @@
       transition: background 0.12s;
     }
     .paper-link:hover { background: var(--bg-soft); text-decoration: none; }
+    .badge-coming-soon {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      background: #f5f5f5;
+      color: #999;
+      border: 1px solid #ddd;
+    }
   </style>
 </head>
 <body>
@@ -75,6 +84,17 @@
 <main>
   <h2 class="section-title">Working Papers</h2>
   <ul class="paper-list">
+
+    <li class="paper-card">
+      <span class="paper-title">
+        A Financial Brain Scan of the LLM
+      </span>
+      <div class="paper-authors">with Hui Chen, Antoine Didisheim, Luciano Somoza, and Hanqing Tian</div>
+      <div class="paper-links">
+        <span class="badge">Working Paper</span>
+        <span class="badge-coming-soon">Coming Soon</span>
+      </div>
+    </li>
 
     <li class="paper-card">
       <span class="paper-title">
@@ -108,18 +128,10 @@
     </li>
 
     <li class="paper-card">
-      <span class="paper-title">A Financial Brain Scan of the LLM</span>
-      <div class="paper-authors">with Hui Chen, Antoine Didisheim, Luciano Somoza, and Hanqing Tian</div>
-      <div class="paper-links">
-        <span class="badge">Working Paper</span>
-      </div>
-    </li>
-
-    <li class="paper-card">
       <span class="paper-title">The Inefficient Pricing of News Shocks</span>
       <div class="paper-authors">with Antoine Didisheim, Bryan Kelly, and Hanqing Tian</div>
       <div class="paper-links">
-        <span class="badge" style="background:#f5f5f5; color:#999; border-color:#ddd;">Draft Coming Soon</span>
+        <span class="badge-coming-soon">Coming Soon</span>
       </div>
     </li>
 
