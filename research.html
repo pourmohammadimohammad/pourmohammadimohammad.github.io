@@ -5,6 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research — Mo Pourmohammadi</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    details { width: 100%; }
+    details summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--yale-blue3);
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-top: 0.6rem;
+      user-select: none;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::before {
+      content: '▸';
+      font-size: 0.7rem;
+      transition: transform 0.15s;
+      color: var(--yale-gold);
+    }
+    details[open] summary::before { transform: rotate(90deg); }
+    details .abstract {
+      margin-top: 0.7rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.75;
+      border-left: 3px solid var(--yale-gold3);
+      padding-left: 1rem;
+    }
+    .paper-date {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-family: 'Inter', sans-serif;
+      margin-left: 0.5rem;
+    }
+    .paper-links { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; }
+    .paper-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      color: var(--yale-blue3);
+      transition: background 0.12s;
+    }
+    .paper-link:hover { background: var(--bg-soft); text-decoration: none; }
+  </style>
 </head>
 <body>
 
@@ -12,7 +60,7 @@
   <div class="inner">
     <a class="brand" href="index.html">
       <img src="assets/img/yale-shield.svg" class="nav-shield" alt="Yale" />
-      Mo Pourmohammadi
+      <span>Mo Pourmohammadi</span>
     </a>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -26,44 +74,89 @@
 
 <main>
   <h2 class="section-title">Working Papers</h2>
-
   <ul class="paper-list">
 
-    <li>
-      <span class="paper-title">Universal Covariance Shrinkage</span>
-      <div class="paper-authors">with Bryan Kelly, Semyon Malamud, Fabio Trojani</div>
-      <span class="paper-status">Working Paper</span>
+    <li class="paper-card">
+      <span class="paper-title">
+        Shrinkage Alignment in High-Dimensional Portfolios
+        <span class="paper-date">Nov 2025</span>
+      </span>
+      <div class="paper-authors">with Barry (Shikun) Ke</div>
+      <div class="paper-links">
+        <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5723922" target="_blank" rel="noopener">SSRN</a>
+      </div>
+      <details>
+        <summary>Abstract</summary>
+        <p class="abstract">We study how shrinkage affects portfolio efficiency when the number of assets approaches or exceeds the sample size. Standard methods, such as ridge, impose uniform shrinkage, treating all assets as ex-ante identical and creating inefficiency when profitability is heterogeneous. Empirically, this "one-size-fits-all" design produces a hump-shaped relationship between model complexity and out-of-sample Sharpe ratios: adding assets can paradoxically reduce performance. We introduce shrinkage alignment, showing that efficiency requires matching shrinkage strength to each asset's true profitability. Building on this insight, we propose Sharpe Ratio Shrinkage (SRS) — a data-driven approach that aligns shrinkage intensity with empirical Sharpe ratios. SRS outperforms conventional methods under profitability heterogeneity and restores the virtue of complexity in high-dimensional portfolio construction.</p>
+      </details>
     </li>
 
-    <li>
-      <span class="paper-title">Universal Portfolio Shrinkage</span>
-      <div class="paper-authors">with Antoine Didisheim, Bryan Kelly, Semyon Malamud</div>
-      <span class="paper-status">Working Paper</span>
+    <li class="paper-card">
+      <span class="paper-title">
+        Universal Portfolio Shrinkage
+        <span class="paper-date">Last revised Apr 2025</span>
+      </span>
+      <div class="paper-authors">with Bryan Kelly, Semyon Malamud, and Fabio Trojani</div>
+      <div class="paper-links">
+        <span class="badge">R&amp;R — <em>Review of Financial Studies</em></span>
+        <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4660670" target="_blank" rel="noopener">SSRN</a>
+      </div>
+      <details>
+        <summary>Abstract</summary>
+        <p class="abstract">We introduce a nonlinear covariance shrinkage method for building optimal portfolios. Our universal portfolio shrinkage approximator (UPSA) is given in closed form, is cheap to implement, and improves upon existing shrinkage methods. Rather than annihilating low-variance principal components of returns, UPSA instead reweights components to explicitly optimize expected out-of-sample portfolio performance. We demonstrate robust empirical improvements over alternative shrinkage methods in the literature.</p>
+      </details>
     </li>
 
-    <li>
-      <span class="paper-title">Universal Regression Shrinkage</span>
-      <div class="paper-authors">with Bryan Kelly, Semyon Malamud, Fabio Trojani</div>
-      <span class="paper-status">Working Paper</span>
+    <li class="paper-card">
+      <span class="paper-title">A Financial Brain Scan of the LLM</span>
+      <div class="paper-authors">with Hui Chen, Antoine Didisheim, Luciano Somoza, and Hanqing Tian</div>
+      <div class="paper-links">
+        <span class="badge">Working Paper</span>
+      </div>
     </li>
 
-    <li>
-      <span class="paper-title">Impact of FOMC Cycle on Market Uncertainty: Evidence From Interest Rate Derivatives</span>
-      <div class="paper-authors">with Indradeap Chatterjee, Marina Di Giacinto, Claudio Tebaldi</div>
-      <span class="paper-status">Working Paper</span>
+    <li class="paper-card">
+      <span class="paper-title">The Inefficient Pricing of News Shocks</span>
+      <div class="paper-authors">with Antoine Didisheim, Bryan Kelly, and Hanqing Tian</div>
+      <div class="paper-links">
+        <span class="badge" style="background:#f5f5f5; color:#999; border-color:#ddd;">Draft Coming Soon</span>
+      </div>
     </li>
 
-    <li>
-      <span class="paper-title">Horizon Based Pricing of Financial and Economic Shocks</span>
-      <div class="paper-authors">with Claudio Tebaldi</div>
-      <span class="paper-status">Working Paper</span>
+  </ul>
+
+  <h2 class="section-title" style="margin-top:2.5rem;">Work in Progress</h2>
+  <ul class="paper-list">
+
+    <li class="paper-card">
+      <span class="paper-title">Complex Rational Expectations Equilibria (CREE)</span>
+      <div class="paper-authors">with Bryan Kelly and Semyon Malamud</div>
     </li>
 
+    <li class="paper-card">
+      <span class="paper-title">Trading Costs and the Cross-Section</span>
+      <div class="paper-authors">with Federico Baldi-Lanfranchi</div>
+    </li>
+
+  </ul>
+
+  <h2 class="section-title" style="margin-top:2.5rem;">Presentations</h2>
+  <ul class="entry-list">
+    <li>
+      <div><span class="entry-title">2025</span><br><span class="entry-sub">ESSFM, Yale Finance Lunch</span></div>
+    </li>
+    <li>
+      <div><span class="entry-title">2024</span><br><span class="entry-sub">EPFL Workshop, Financial Risks International Forum, Frontiers of Factor Investing, SFI Research Days, Society of Financial Econometrics, CEPR Asset Pricing Week</span></div>
+    </li>
+    <li>
+      <div><span class="entry-title">2023</span><br><span class="entry-sub">EFA (Discussant), SFI Research Days (Discussant), Geneva Brown Bag, EPFL SFI Workshop</span></div>
+    </li>
   </ul>
 </main>
 
 <footer>
-  &copy; 2025 Mohammad Pourmohammadi
+  &copy; 2025 Mohammad Pourmohammadi &nbsp;&middot;&nbsp;
+  <a href="https://som.yale.edu" target="_blank" rel="noopener">Yale School of Management</a>
 </footer>
 
 </body>
