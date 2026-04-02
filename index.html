@@ -12,7 +12,7 @@
   <div class="inner">
     <a class="brand" href="index.html">
       <img src="assets/img/yale-shield.svg" class="nav-shield" alt="Yale" />
-      Mo Pourmohammadi
+      <span>Mo Pourmohammadi</span>
     </a>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -24,11 +24,13 @@
   </div>
 </nav>
 
-<main>
-  <section class="hero">
+<!-- Blue hero banner -->
+<div class="hero-banner">
+  <div class="inner">
     <div class="hero-photo">
-      <img src="assets/img/photo.jpg" alt="Mohammad Pourmohammadi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-      <div class="photo-placeholder" style="display:none">No photo yet</div>
+      <img src="assets/img/photo.jpg" alt="Mohammad Pourmohammadi"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <div class="photo-placeholder" style="display:none">Add photo</div>
     </div>
     <div class="hero-text">
       <h1>Mohammad Pourmohammadi</h1>
@@ -50,35 +52,47 @@
       </p>
 
       <div class="hero-links">
-        <a class="btn btn-primary" href="cv.html">CV</a>
-        <a class="btn btn-outline" href="mailto:mo.pourmohammadi@yale.edu">Email</a>
-        <a class="btn btn-outline" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="btn btn-outline" href="https://github.com/pourmohammadimohammad" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-gold" href="cv.html">CV</a>
+        <a class="btn btn-outline-white" href="mailto:mo.pourmohammadi@yale.edu">Email</a>
+        <a class="btn btn-outline-white" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn btn-outline-white" href="https://github.com/pourmohammadimohammad" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- Recent papers teaser -->
+<!-- Page body -->
+<div class="home-content">
   <h2 class="section-title">Recent Research</h2>
   <ul class="paper-list">
+
     <li class="paper-card">
       <span class="paper-title">Universal Covariance Shrinkage</span>
       <div class="paper-authors">with Bryan Kelly, Semyon Malamud, Fabio Trojani</div>
       <span class="badge">Working Paper</span>
     </li>
+
     <li class="paper-card">
       <span class="paper-title">Universal Portfolio Shrinkage</span>
       <div class="paper-authors">with Antoine Didisheim, Bryan Kelly, Semyon Malamud</div>
       <span class="badge">Working Paper</span>
     </li>
+
+    <li class="paper-card">
+      <span class="paper-title">Universal Regression Shrinkage</span>
+      <div class="paper-authors">with Bryan Kelly, Semyon Malamud, Fabio Trojani</div>
+      <span class="badge">Working Paper</span>
+    </li>
+
   </ul>
-  <p style="margin-top:1rem; font-size:0.85rem;">
+  <p style="margin-top:1.2rem; font-size:0.85rem;">
     <a href="research.html">View all papers &rarr;</a>
   </p>
-</main>
+</div>
 
 <footer>
-  &copy; 2025 Mohammad Pourmohammadi &nbsp;&middot;&nbsp; Yale School of Management
+  &copy; 2025 Mohammad Pourmohammadi &nbsp;&middot;&nbsp;
+  <a href="https://som.yale.edu" target="_blank" rel="noopener">Yale School of Management</a>
 </footer>
 
 </body>
