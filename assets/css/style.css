@@ -126,12 +126,12 @@ nav ul li a.active::after { opacity: 1; }
 }
 
 .hero-photo img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   object-position: top;
   border-radius: 50%;
-  border: 3px solid var(--yale-gold);
+  border: 4px solid var(--yale-gold);
   box-shadow: 0 8px 32px rgba(0,0,0,0.35);
   display: block;
 }
@@ -419,11 +419,22 @@ footer a:hover { color: var(--yale-gold3); }
    Responsive
    ============================================================ */
 @media (max-width: 640px) {
-  .hero-banner .inner { grid-template-columns: 1fr; gap: 1.5rem; }
-  .hero-photo img,
-  .hero-photo .photo-placeholder { width: 120px; height: 145px; }
+  .hero-banner .inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .hero-photo { display: flex; justify-content: center; }
+  .hero-photo img {
+    width: 160px;
+    height: 160px;
+  }
+  .hero-photo .photo-placeholder { width: 160px; height: 160px; border-radius: 50%; }
+  .btn-group { justify-content: center; flex-wrap: wrap; }
+  nav .inner { overflow-x: auto; }
+  nav ul { flex-wrap: nowrap; gap: 0; }
+  nav ul li a { padding: 0 0.4rem; font-size: 0.72rem; white-space: nowrap; }
   nav .brand span { display: none; }
-  nav ul li a { padding: 0 0.55rem; font-size: 0.78rem; }
   .repo-grid { grid-template-columns: 1fr; }
   .entry-list li { grid-template-columns: 1fr; gap: 0.1rem; }
   main { padding: 2rem 1.2rem 4rem; }
