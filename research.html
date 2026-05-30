@@ -63,6 +63,27 @@
       color: #999;
       border: 1px solid #ddd;
     }
+    .paper-conferences {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .paper-conferences-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .conf-badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
+      background: #eef2f8;
+      color: var(--yale-blue3);
+      border: 1px solid #c8d4e8;
+    }
   </style>
 </head>
 <body>
@@ -97,6 +118,10 @@
       <div class="paper-links">
         <a class="paper-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6540399" target="_blank" rel="noopener">SSRN</a>
         <a class="paper-link" href="https://www.nber.org/papers/w35093" target="_blank" rel="noopener">NBER</a>
+      </div>
+      <div class="paper-conferences">
+        <span class="paper-conferences-label">Conferences:</span>
+        <span class="conf-badge">NBER SI</span>
       </div>
       <details>
         <summary>Abstract</summary>
