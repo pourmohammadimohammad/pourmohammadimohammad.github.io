@@ -71,7 +71,13 @@
   <ul class="paper-list">
 
     <li class="paper-card">
-      <span class="paper-title">The Inefficient Pricing of News Shocks <span style="font-size:0.75rem;color:var(--muted);font-weight:400;">Apr 2026</span></span>
+      <span class="paper-title">Universal Portfolio Shrinkage</span>
+      <div class="paper-authors">with Bryan Kelly, Semyon Malamud, and Fabio Trojani</div>
+      <div style="margin-top:0.5rem;"><span class="badge">Forthcoming — <em>Review of Financial Studies</em></span></div>
+    </li>
+
+    <li class="paper-card">
+      <span class="paper-title">The Inefficient Pricing of News<span style="font-size:0.75rem;color:var(--muted);font-weight:400;">Apr 2026</span></span>
       <div class="paper-authors">with Antoine Didisheim, Bryan Kelly, and Hanqing Tian</div>
     </li>
 
@@ -92,11 +98,11 @@
 </div>
 
 <footer>
-  &copy; 2025 Mo Pourmohammadi &nbsp;&middot;&nbsp;
+  &copy; <span id="yr">2026</span> Mo Pourmohammadi &nbsp;&middot;&nbsp;
   <a href="https://som.yale.edu" target="_blank" rel="noopener">Yale School of Management</a>
 </footer>
 
 <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
-<script>var btn=document.getElementById("backToTop");window.addEventListener("scroll",function(){btn.classList.toggle("visible",window.scrollY>300);});btn.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});</script>
+<script>var btn=document.getElementById("backToTop");window.addEventListener("scroll",function(){btn.classList.toggle("visible",window.scrollY>300);});btn.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});var y=document.getElementById("yr");if(y){y.textContent=new Date().getFullYear();}</script>
 </body>
 </html>
