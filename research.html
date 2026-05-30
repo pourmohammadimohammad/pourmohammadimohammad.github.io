@@ -65,10 +65,15 @@
     }
     .paper-conferences {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 0.4rem;
       margin-top: 0.5rem;
+    }
+    .conf-badges {
+      display: flex;
       flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
     }
     .paper-conferences-label {
       font-size: 0.75rem;
@@ -124,10 +129,12 @@
       </div>
       <div class="paper-conferences">
         <span class="paper-conferences-label">Conferences:</span>
-        <span class="conf-badge">Financial Risks International Forum</span>
-        <span class="conf-badge">Frontiers of Factor Investing</span>
-        <span class="conf-badge">SFI Research Days</span>
-        <span class="conf-badge">Society of Financial Econometrics</span>
+        <div class="conf-badges">
+          <span class="conf-badge">Financial Risks International Forum</span>
+          <span class="conf-badge">Frontiers of Factor Investing</span>
+          <span class="conf-badge">SFI Research Days</span>
+          <span class="conf-badge">Society of Financial Econometrics</span>
+        </div>
       </div>
       <details>
         <summary>Abstract</summary>
@@ -153,7 +160,9 @@
       </div>
       <div class="paper-conferences">
         <span class="paper-conferences-label">Conferences:</span>
-        <span class="conf-badge">NBER SI</span>
+        <div class="conf-badges">
+          <span class="conf-badge">NBER SI</span>
+        </div>
       </div>
       <details>
         <summary>Abstract</summary>
@@ -187,8 +196,10 @@
       </div>
       <div class="paper-conferences">
         <span class="paper-conferences-label">Conferences:</span>
-        <span class="conf-badge">EFA 2026</span>
-        <span class="conf-badge">Toronto Asset Pricing and Investments Workshop 2026</span>
+        <div class="conf-badges">
+          <span class="conf-badge">EFA 2026</span>
+          <span class="conf-badge">Toronto Asset Pricing and Investments Workshop 2026</span>
+        </div>
       </div>
       <details>
         <summary>Abstract</summary>
