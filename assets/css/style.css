@@ -316,15 +316,16 @@ h2.section-title::after {
 
 .paper-card .paper-title {
   font-family: 'Lora', Georgia, serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
+  line-height: 1.4;
   color: var(--text);
   display: block;
   margin-bottom: 0.3rem;
 }
 
 .paper-card .paper-authors {
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   color: var(--muted);
   margin-bottom: 0.5rem;
 }
@@ -431,10 +432,12 @@ footer a:hover { color: var(--yale-gold3); }
   }
   .hero-photo .photo-placeholder { width: 160px; height: 160px; border-radius: 50%; }
   .btn-group { justify-content: center; flex-wrap: wrap; }
-  nav .inner { overflow-x: auto; }
-  nav ul { flex-wrap: nowrap; gap: 0; }
-  nav ul li a { padding: 0 0.4rem; font-size: 0.72rem; white-space: nowrap; }
-  nav .brand span { display: none; }
+  /* Name on one row, links on the row below (one row down to 360px;
+     narrower phones wrap instead of scrolling links off-screen) */
+  nav .inner { height: auto; flex-direction: column; gap: 0.1rem; padding: 0.55rem 0.5rem 0; }
+  nav ul { flex-wrap: wrap; justify-content: center; }
+  nav ul li a { line-height: 40px; padding: 0 0.34rem; font-size: 0.75rem; white-space: nowrap; }
+  nav ul li a::after { left: 0.34rem; right: 0.34rem; }
   .repo-grid { grid-template-columns: 1fr; }
   .entry-list li { grid-template-columns: 1fr; gap: 0.1rem; }
   main { padding: 2rem 1.2rem 4rem; }

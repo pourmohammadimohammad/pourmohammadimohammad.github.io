@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research — Mo Pourmohammadi</title>
   <meta name="description" content="Working papers on portfolio theory, machine learning in finance, and asset pricing by Mo Pourmohammadi." />
+  <link rel="canonical" href="https://mopourmohammadi.com/research.html" />
+  <!-- Link previews (LinkedIn, Slack, email) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mo Pourmohammadi" />
+  <meta property="og:title" content="Research — Mo Pourmohammadi" />
+  <meta property="og:description" content="Working papers on portfolio theory, machine learning in finance, and asset pricing by Mo Pourmohammadi." />
+  <meta property="og:url" content="https://mopourmohammadi.com/research.html" />
+  <meta property="og:image" content="https://mopourmohammadi.com/assets/img/photo-1200.jpg" />
+  <meta property="og:image:alt" content="Portrait of Mo Pourmohammadi" />
+  <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     details { width: 100%; }
@@ -16,7 +26,7 @@
       align-items: center;
       gap: 0.4rem;
       color: var(--yale-blue3);
-      font-size: 0.82rem;
+      font-size: 0.88rem;
       font-weight: 500;
       margin-top: 0.6rem;
       user-select: none;
@@ -31,23 +41,23 @@
     details[open] summary::before { transform: rotate(90deg); }
     details .abstract {
       margin-top: 0.7rem;
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       color: var(--muted);
       line-height: 1.75;
       border-left: 3px solid var(--yale-gold3);
       padding-left: 1rem;
     }
     .paper-date {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       color: var(--muted);
       font-family: 'Inter', sans-serif;
       margin-left: 0.5rem;
     }
     .paper-links { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; align-items: center; }
     .paper-link {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 500;
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.7rem;
       border-radius: 3px;
       border: 1px solid var(--border);
       color: var(--yale-blue3);
@@ -55,7 +65,7 @@
     }
     .paper-link:hover { background: var(--bg-soft); text-decoration: none; }
     .badge-coming-soon {
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       font-weight: 500;
       padding: 0.2rem 0.6rem;
       border-radius: 3px;
@@ -76,18 +86,23 @@
       align-items: center;
     }
     .paper-conferences-label {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       color: var(--muted);
       font-style: italic;
     }
     .conf-badge {
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       font-weight: 500;
       padding: 0.2rem 0.55rem;
       border-radius: 3px;
       background: #eef2f8;
       color: var(--yale-blue3);
       border: 1px solid #c8d4e8;
+    }
+    @media (max-width: 640px) {
+      /* Label above the badges, so they use the full card width */
+      .paper-conferences { flex-direction: column; gap: 0.35rem; }
+      .paper-date { display: block; margin-left: 0; }
     }
   </style>
 </head>
